@@ -4,7 +4,7 @@ import Blog from "./Blog";
 
 export default function Blogs() {
     return (
-        <div className="w-full flex flex-col">
+        <div id="blogs" className="w-full flex flex-col">
             <div className="text-4xl text-black font-semibold">EXPLORE OUR BLOGS</div>
             <div className="flex items-start gap-20 mt-4">
                 <div className="text-accent font-medium text-xl">{"[Blogs]"}</div>

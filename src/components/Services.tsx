@@ -4,7 +4,7 @@ import { services } from "@/utils/data";
 
 export default function Services() {
     return (
-        <div className="w-full flex flex-col relative">
+        <div id="services" className="w-full flex flex-col relative">
             <div className="text-4xl text-black font-semibold">HOW CAN I HELP YOU</div>
             <div className="flex items-start gap-20 mt-4">
                 <div className="text-accent font-medium text-xl">{"[Services]"}</div>

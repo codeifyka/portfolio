@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function About() {
     return (
-        <div className="w-full flex flex-col">
+        <div id="about" className="w-full flex flex-col">
             <div className="text-4xl text-black font-semibold">ABOUT OUR TEAM</div>
             <div className="flex items-start gap-20 mt-4">
                 <div className="text-accent font-medium text-xl">{"[About us]"}</div>

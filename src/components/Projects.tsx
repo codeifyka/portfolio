@@ -4,7 +4,7 @@ import Project from "./Project";
 
 export default function Projects() {
     return (
-        <div className="w-full flex flex-col">
+        <div id="projects" className="w-full flex flex-col">
             <div className="text-4xl text-white font-semibold">SELECTED WORKS</div>
             <div className="flex items-start gap-20 mt-4">
                 <div className="text-accent font-medium text-xl">{"[Works]"}</div>

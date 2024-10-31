@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Testimonials() {
     return (
-        <div className="w-full flex flex-col">
+        <div id="testimonials" className="w-full flex flex-col">
             <div className="w-full flex items-start justify-between">
                 <div className="text-4xl text-black font-semibold whitespace-pre-line">{"Don't take my word\nfor it"}</div>
                 <div className="flex items-start gap-20 mt-4">
