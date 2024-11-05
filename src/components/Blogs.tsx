@@ -7,7 +7,7 @@ export default function Blogs() {
   return (
     <div id="blogs" className="w-full flex flex-col">
       <div className="text-4xl text-black font-semibold">EXPLORE OUR BLOGS</div>
-      <div className="flex items-start gap-20 mt-4">
+      <div className="flex flex-col sm:flex-col items-start gap-4 sm:gap-20 mt-4">
         <div className="text-accent font-medium text-xl">{"[Blogs]"}</div>
         <div>
           <div className="text-black text-base w-80">
@@ -26,7 +26,7 @@ export default function Blogs() {
           </div>
         </div>
       </div>
-      <div className="w-full my-16 grid grid-cols-2 gap-4">
+      <div className="w-full my-16 grid sm:grid-cols-2 gap-4">
         {blogs.map((blog, index) => {
           return <Blog key={index} index={index + 1} blog={blog} />;
         })}

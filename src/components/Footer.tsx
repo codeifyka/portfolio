@@ -3,9 +3,9 @@ import { BLOG_PNG, GOOGLE_PNG, LINKEDIN_PNG, LOGO_PNG } from "@/utils/consts";
 export default function Footer() {
     return (
         <div className="w-full flex flex-col items-center border-t border-black/75 rounded-t-3xl">
-            <div className="w-11/12 flex items-center gap-16 mt-16">
+            <div className="w-11/12 flex flex-col sm:flex-row sm:items-center gap-16 mt-16">
                 <div className="h-8">
-                    <img className="w-full h-full rounded-full" src={LOGO_PNG} alt="logo" />
+                    <img className="h-full rounded-full" src={LOGO_PNG} alt="logo" />
                 </div>
                 <div>
                     <div className="font-semibold text-2xl text-black mb-3">Contact</div>

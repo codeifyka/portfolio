@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div id="about" className="w-full flex flex-col">
       <div className="text-4xl text-black font-semibold">ABOUT OUR TEAM</div>
-      <div className="flex items-start gap-20 mt-4">
+      <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-20 mt-4">
         <div className="text-accent font-medium text-xl">{"[About us]"}</div>
         <div>
           <div className="text-black text-base w-80">
@@ -25,8 +25,8 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="mt-16 w-full flex items-center">
-        <div className="w-1/2 flex flex-col">
+      <div className="mt-16 w-full flex flex-col sm:flex-row items-center gap-8 sm:gap-0">
+        <div className="w-full sm:w-1/2 flex flex-col">
           <div className="w-11/12">
             <div className="text-4xl text-black">
               {'"Huy is phenomenal. An absolute pleasure to work with!"'}
@@ -66,7 +66,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="w-1/2 flex flex-col">
+        <div className="w-full sm:w-1/2 flex flex-col">
           <div className="w-full aspect-[4/3] bg-gray-950 rounded-xl"></div>
         </div>
       </div>

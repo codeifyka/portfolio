@@ -14,15 +14,15 @@ export default function HeroSection() {
       <div className="w-11/12 flex flex-col py-4">
         <div className="h-10 w-fit">
           <img
-            className="w-full h-full rounded-full"
+            className="sm:w-full h-full rounded-full"
             src={LOGO_PNG}
             alt="logo"
           />
         </div>
-        <div className="w-1/2 mt-4 text-black/75 text-base">{HERO_TEXT}</div>
+        <div className="w-full sm:w-1/2 mt-4 text-black/75 text-base">{HERO_TEXT}</div>
       </div>
-      <div className="w-11/12 flex items-center justify-between text-accent/75 mt-16">
-        <div className="w-1/2 flex items-start">
+      <div className="w-11/12 flex flex-col sm:flex-row gap-8 sm:gap-0 items-center justify-between text-accent/75 mt-16">
+        <div className="w-full sm:w-1/2 flex items-start">
           <Icon
             icon="iconamoon:arrow-up-1"
             className="text-6xl rotate-[135deg]"
@@ -54,8 +54,7 @@ export default function HeroSection() {
             <div className="font-semibold text-xl">12</div>
           </div>
         </div>
-
-        <div className="w-1/3 flex items-start gap-2">
+        <div className="w-full sm:w-1/3 flex items-start gap-2">
           <img src={ARROW_DOWN_PNG} className="h-6" />
           <div>
             <div className="text-black/75 font-medium">{HERO_TEXT_2}</div>

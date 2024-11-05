@@ -19,7 +19,7 @@ export default function CallToAction({ setIsOpen }: ModalProps) {
           <Icon icon="iconamoon:arrow-right-1" className="-rotate-45" />
         </div>
       </div>
-      <img src={WORK_GLOBALY_PNG} className="absolute bottom-6 left-4" />
+      <img src={WORK_GLOBALY_PNG} className="hidden sm:block absolute bottom-6 left-4" />
     </div>
   );
 }

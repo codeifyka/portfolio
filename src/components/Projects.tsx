@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <div id="projects" className="w-full flex flex-col">
       <div className="text-4xl text-white font-semibold">SELECTED WORKS</div>
-      <div className="flex items-start gap-20 mt-4">
+      <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-20 mt-4">
         <div className="text-accent font-medium text-xl">{"[Works]"}</div>
         <div>
           <div className="text-white text-base w-80">

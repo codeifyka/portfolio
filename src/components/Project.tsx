@@ -8,17 +8,17 @@ interface ProjectProps {
 export default function Project({ index, project }: ProjectProps) {
     return (
         <div className="w-full flex flex-col border-t border-lightGray py-16">
-            <div className="w-full flex items-center justify-between mb-8">
-                <div className="text-3xl font-semibold text-white">{`[${index}]`}</div>
-                <div className="w-1/2 flex items-center justify-between">
+            <div className="w-full flex flex-col sm:flex-row items-center justify-between mb-8">
+                <div className="w-full sm:w-fit text-3xl font-semibold text-white">{`[${index}]`}</div>
+                <div className="w-full sm:w-1/2 flex items-center justify-between">
                     <div className="text-3xl font-semibold text-white">{project.title}</div>
                     <div className="h-12">
                         <img src={SECONDARY_STAR_PNG} />
                     </div>
                 </div>
             </div>
-            <div className="w-full flex">
-                <div className="w-1/2">
+            <div className="w-full flex flex-col sm:flex-row gap-8 sm:gap-0">
+                <div className="w-full sm:w-1/2">
                     <div className="text-base text-white">{project.description}</div>
                     <div className="mt-4 flex items-center flex-wrap gap-2">
                         {project.categories.map((category, index) => {
@@ -36,7 +36,7 @@ export default function Project({ index, project }: ProjectProps) {
                         <div key={index} className="text-xs text-black bg-white border-white rounded-full p-2">{"2023"}</div>
                     </div>
                 </div>
-                <div className="w-1/2 flex flex-col">
+                <div className="w-full sm:w-1/2 flex flex-col">
                     <div className="w-full aspect-video bg-gray-500 rounded-xl"></div>
                 </div>
             </div>

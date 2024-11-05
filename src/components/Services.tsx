@@ -9,7 +9,7 @@ export default function Services() {
       <div className="text-4xl text-black font-semibold">
         HOW CAN I HELP YOU
       </div>
-      <div className="flex items-start gap-20 mt-4">
+      <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-20 mt-4">
         <div className="text-accent font-medium text-xl">{"[Services]"}</div>
         <div>
           <div className="text-black text-base w-80">
