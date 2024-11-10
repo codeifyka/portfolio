@@ -7,26 +7,15 @@ export const services: Service[] = [
 
 export const projects: Project[] = [
     {
-        title: "Platform name 1",
-        thumbnail_url: "",
-        description: "Lorem ipsum dolor sit amet. Est galisum doloremque hic autem nesciunt ex odit tenetur ab nesciunt incidunt ut dolor placeat. Est deleniti molestias ut nostrum praesentium ut eveniet eveniet aut nihil ipsum qui sunt quod qui",
-        categories: ["e-commerce"],
-        skills: ["Design", "Web Devlopment"],
-    },
-    {
-        title: "Platform name 2",
-        thumbnail_url: "",
-        description: "Lorem ipsum dolor sit amet. Est galisum doloremque hic autem nesciunt ex odit tenetur ab nesciunt incidunt ut dolor placeat. Est deleniti molestias ut nostrum praesentium ut eveniet eveniet aut nihil ipsum qui sunt quod qui",
-        categories: ["e-commerce"],
-        skills: ["Design", "Web Devlopment"],
-    },
-    {
-        title: "Platform name 3",
-        thumbnail_url: "",
-        description: "Lorem ipsum dolor sit amet. Est galisum doloremque hic autem nesciunt ex odit tenetur ab nesciunt incidunt ut dolor placeat. Est deleniti molestias ut nostrum praesentium ut eveniet eveniet aut nihil ipsum qui sunt quod qui",
-        categories: ["e-commerce"],
-        skills: ["Desktop"],
-    },
+        title: "Code Craft",
+        thumbnail_url: "/projects/code_craft/thumbnail.png",
+        description: "We've created a platform designed to connect companies, clubs, and individuals who are passionate about coding. Think of it as a central hub for coding events, job opportunities, and meaningful discussions. Our goal was to make it user-friendly, with a focus on helping people discover opportunities and assisting companies in finding skilled talent.",
+        categories: ["Web Development", "UI UX", "DevOps"],
+        skills: ["ReactJS", "NodeJS", "TypeScript", "Docker", "Git", "Socket", "Web Socket", "Bash Scripting", "MySQL", "Jest"],
+        created_at: "2024",
+        preview_url: "https://code-craft-front.vercel.app",
+        source_code_url: "https://github.com/code-craft-project"
+    }
 ];
 
 export const blogs: Blog[] = [
