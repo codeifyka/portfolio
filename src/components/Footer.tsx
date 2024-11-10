@@ -1,4 +1,4 @@
-import { BLOG_PNG, GOOGLE_PNG, LINKEDIN_PNG, LOGO_PNG } from "@/utils/consts";
+import { BEHANCE_PNG, GITHUB, LINKEDIN_PNG, LOGO_PNG } from "@/utils/consts";
 
 export default function Footer() {
     return (
@@ -18,8 +18,8 @@ export default function Footer() {
                     <div className="text-black whitespace-pre-line text-start">{"To see our content on\nsocial media"}</div>
                     <div className="flex items-center gap-2">
                         <img className="h-8 w-8" src={LINKEDIN_PNG} />
-                        <img className="h-8 w-8" src={GOOGLE_PNG} />
-                        <img className="h-8 w-8" src={BLOG_PNG} />
+                        <img className="h-8 w-8" src={GITHUB} />
+                        <img className="h-8 w-8" src={BEHANCE_PNG} />
                     </div>
                 </div>
             </div>

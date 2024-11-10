@@ -1,6 +1,6 @@
-import { BLOG_PNG, GOOGLE_PNG, LINKEDIN_PNG } from "@/utils/consts";
 import { scrollToCallToAction } from "@/utils/scrollTo";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import TeamMembers from "./TeamMembers";
 
 export default function About() {
   return (
@@ -25,51 +25,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="mt-16 w-full flex flex-col sm:flex-row items-center gap-8 sm:gap-0">
-        <div className="w-full sm:w-1/2 flex flex-col">
-          <div className="w-11/12">
-            <div className="text-4xl text-black">
-              {'"Huy is phenomenal. An absolute pleasure to work with!"'}
-            </div>
-            <div className="mt-16 flex items-center gap-8">
-              <div className="text-2xl text-black/75 font-bold">
-                kadik salah eddine
-              </div>
-              <div className="flex items-center gap-2">
-                <img className="h-8 w-8" src={LINKEDIN_PNG} />
-                <img className="h-8 w-8" src={GOOGLE_PNG} />
-                <img className="h-8 w-8" src={BLOG_PNG} />
-              </div>
-            </div>
-            <div className="mt-4 flex flex-wrap items-center gap-2">
-              {["Design", "Web Development"].map((skill, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="text-xs border border-black/75 text-black/75 rounded-full p-2"
-                  >
-                    {skill}
-                  </div>
-                );
-              })}
-            </div>
-            <div className="mt-16 flex items-center justify-between">
-              <div></div>
-              <div className="flex items-center gap-2">
-                <div className="text-white bg-black rounded-full px-4 py-1">
-                  Prev
-                </div>
-                <div className="text-white bg-black rounded-full px-4 py-1">
-                  Next
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full sm:w-1/2 flex flex-col">
-          <div className="w-full aspect-[4/3] bg-gray-950 rounded-xl"></div>
-        </div>
-      </div>
+      <TeamMembers />
     </div>
   );
 }

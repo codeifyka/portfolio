@@ -56,3 +56,34 @@ export const blogs: Blog[] = [
         created_at: "07/04/2024"
     },
 ];
+
+export const teamMembers: TeamMember[] = [
+    {
+        name: "Kadik Salah Eddine",
+        skills: [
+            "Web Development",
+            "Mobile Development",
+            "Desktop Development",
+            "UI UX Design",
+        ],
+        testimonial: "Salah is an exceptional developer and a valuable team asset!",
+        github_url: "https://github.com/kadik23",
+        linkedin_url: "https://www.linkedin.com/in/salah-eddine-kadik-6b3889284"
+    },
+    {
+        name: "Abdelfetah Dev",
+        skills: [
+            "Web Development",
+            "Mobile Development",
+            "Desktop Development",
+            "Database Systems",
+            "Systems Programming",
+            "Scripts Programming",
+            "UI UX Design",
+            "DevOps"
+        ],
+        testimonial: "Abdelfetah is an exceptional developer and a valuable team asset!",
+        github_url: "https://github.com/abdelfetah18",
+        linkedin_url: "https://www.linkedin.com/in/abdelfetahdev"
+    }
+];

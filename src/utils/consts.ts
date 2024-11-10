@@ -10,9 +10,10 @@ export const ARROW_DOWN_PNG = "/arrow_down.png";
 export const STAR_PNG = "/star.png";
 export const SECONDARY_STAR_PNG = "/secondary_star.png";
 export const LINKEDIN_PNG = "/linkedin.png";
-export const GOOGLE_PNG = "/google.png";
-export const BLOG_PNG = "/blog.png";
+export const GITHUB = "/google.png";
+export const BEHANCE_PNG = "/blog.png";
 export const WORK_GLOBALY_PNG = "/work_globaly.png";
+export const DEFAULT_MEMBER_PNG = "/team_members/default.png";
 
 export const HERO_TEXT = "We are a collective of talented freelancers, each bringing unique skills and creativity to every project. Our team is dedicated to delivering exceptional results, blending innovation with expertise to transform your vision into reality. Dive into our portfolio to see our latest work and discover the diverse talents that make up our dynamic team.";
 export const HERO_TEXT_2 = "Our commitment to quality and innovation is reflected in everything we do. Ready to transform your vision into reality? Let's get started."
