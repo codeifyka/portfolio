@@ -26,7 +26,33 @@ export const projects: Project[] = [
         skills: ["ReactJS", "NodeJS", "TypeScript", "Docker", "Git", "Socket", "Web Socket", "Bash Scripting", "MySQL", "Jest"],
         created_at: "2024",
         preview_url: "https://code-craft-front.vercel.app",
-        source_code_url: "https://github.com/code-craft-project"
+        source_code_url: "https://github.com/code-craft-project",
+        other_images: [
+            "projects/code_craft/image.png",
+            "projects/code_craft/image (1).png",
+            "projects/code_craft/image (2).png",
+            "projects/code_craft/image (3).png",
+            "projects/code_craft/image (4).png",
+            "projects/code_craft/image (5).png"
+        ]
+    },
+    {
+        title: "Novalance",
+        thumbnail_url: "/projects/novalance/thumbnail.png",
+        description: "A Novalance is an online platform that connects freelancers with clients who need their services. These websites provide a space where freelancers can showcase their skills, and clients can post projects or tasks that they need help with.",
+        categories: ["Web Development", "UI UX", "DevOps"],
+        skills: ["VueJS", "Laravel", "TypeScript", "Docker", "Git", "Socket", "Web Socket", "Bash Scripting", "MySQL","TailwindCss"],
+        created_at: "2023",
+        preview_url: "https://novalance-frontend.vercel.app/",
+        source_code_url: "https://github.com/codeifyka/novalance-frontend",
+        other_images: [
+            "/projects/novalance/Chat (FreeLancer).png",
+            "/projects/novalance/Create Job Post.png",
+            "/projects/novalance/Landing Page.png",
+            "/projects/novalance/My Projects (FreeLancer).png",
+            "/projects/novalance/My Purchases.png",
+            "/projects/novalance/Service.png"
+        ]
     }
 ];
 
@@ -68,7 +94,9 @@ export const teamMembers: TeamMember[] = [
         ],
         testimonial: "Salah is an exceptional developer and a valuable team asset!",
         github_url: "https://github.com/kadik23",
-        linkedin_url: "https://www.linkedin.com/in/salah-eddine-kadik-6b3889284"
+        linkedin_url: "https://www.linkedin.com/in/salah-eddine-kadik-6b3889284",
+        behance_url: "https://www.behance.net/kadiksalah",
+        profile_image_url:"/team_members/salah.jpg"
     },
     {
         name: "Abdelfetah Dev",

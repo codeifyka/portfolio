@@ -7,4 +7,5 @@ interface Project {
     created_at: string;
     preview_url?: string;
     source_code_url?: string;
+    other_images?: string[]
 };
