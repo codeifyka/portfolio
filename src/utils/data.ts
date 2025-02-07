@@ -82,6 +82,28 @@ export const projects: Project[] = [
       "/projects/novalance/Service.png",
     ],
   },
+  {
+    title: "Tabibi",
+    thumbnail_url: "/projects/tabibi/thumbnail.png",
+    description:
+      "Tabibi is a web and mobile application designed to streamline the process of booking medical appointments and managing patient follow-up in clinics and medical offices.",
+    categories: ["UI UX Design"],
+    skills: [
+      "UI UX Design",
+      "Figma Tool",
+      "UI UX Study",
+    ],
+    created_at: "2024",
+    preview_url: "https://www.behance.net/gallery/205359047/Ui-Ux-Case-Study-(Tabibi-App)",
+    other_images: [
+      "/projects/tabibi/LandingPage.png",
+      "/projects/tabibi/Home.png",
+      "/projects/tabibi/Chat.png",
+      "/projects/tabibi/Notification.png",
+      "/projects/tabibi/Appointment.png",
+      "/projects/tabibi/Confirmation.png",
+    ],
+  },
 ];
 
 export const blogs: Blog[] = [
