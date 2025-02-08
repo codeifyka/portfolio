@@ -94,7 +94,7 @@ export default function Project({ index, project }: ProjectProps) {
           >
             <img
               src={project.thumbnail_url}
-              className="w-full aspect-video bg-gray-500 rounded-xl"
+              className="w-full aspect-video bg-gray-500 rounded-xl object-contain"
             />
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function Project({ index, project }: ProjectProps) {
                   key={images[currentImageIndex]}
                   src={images[currentImageIndex]}
                   alt={`Image ${currentImageIndex + 1}`}
-                  className="w-full max-h-[80vh] rounded-lg"
+                  className="w-full max-h-[80vh] rounded-lg object-contain"
                   initial={{ x: 300, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   exit={{ x: -300, opacity: 0 }}
