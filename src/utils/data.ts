@@ -88,13 +88,10 @@ export const projects: Project[] = [
     description:
       "Tabibi is a web and mobile application designed to streamline the process of booking medical appointments and managing patient follow-up in clinics and medical offices.",
     categories: ["UI UX Design"],
-    skills: [
-      "UI UX Design",
-      "Figma Tool",
-      "UI UX Study",
-    ],
+    skills: ["UI UX Design", "Figma Tool", "UI UX Study"],
     created_at: "2024",
-    preview_url: "https://www.behance.net/gallery/205359047/Ui-Ux-Case-Study-(Tabibi-App)",
+    preview_url:
+      "https://www.behance.net/gallery/205359047/Ui-Ux-Case-Study-(Tabibi-App)",
     other_images: [
       "/projects/tabibi/LandingPage.png",
       "/projects/tabibi/Home.png",
@@ -164,6 +161,23 @@ export const projects: Project[] = [
       "/projects/watch_together_mobile/video_player.png",
     ],
   },
+  {
+    title: "Banquet Hall Management",
+    thumbnail_url: "/projects/banquet_hall/thumbnail.png",
+    description:
+      "Desktop application to manage the Banquet Hall like Clients, Reservations, Paiments and Receipts.",
+    categories: ["Desktop Development", "DevOps"],
+    skills: ["Electron JS", "Typescript", "React JS", "CSS", "SqLite"],
+    created_at: "2024",
+    source_code_url: "https://github.com/kadik23/banquet-hall-management",
+    other_images: [
+      "/projects/banquet_hall/Capture d'écran 2025-02-10 221741.png",
+      "/projects/banquet_hall/Capture d'écran 2025-02-10 221828.png",
+      "/projects/banquet_hall/Capture d'écran 2025-02-10 221905.png",
+      "/projects/banquet_hall/Capture d'écran 2025-02-10 221929.png",
+      "/projects/banquet_hall/Capture d'écran 2025-02-10 221953.png",
+    ],
+  },
 ];
 
 export const blogs: Blog[] = [
@@ -231,7 +245,7 @@ export const testimonials: testimonials[] = [
   {
     client: "Banquet Hall Owner",
     body: "Salah developed a powerful desktop application for our banquet management needs, and it has completely transformed the way we handle event planning and operations. The system is intuitive, efficient, and tailored perfectly to our requirements.",
-    services: "Desktop Development"
+    services: "Desktop Development",
   },
   {
     client: "Legal Solutions Hub",
