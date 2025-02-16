@@ -10,11 +10,8 @@ import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import {
-  GRADIENT_1_PNG,
-  GRADIENT_2_PNG,
   GRADIENT_3_PNG,
   GRADIENT_4_PNG,
-  GRADIENT_5_PNG,
 } from "@/utils/consts";
 import { useState } from "react";
 
@@ -28,9 +25,6 @@ export default function Home() {
       </div>
       {isOpen && <Modal setIsOpen={setIsOpen}/>}
       <div className="w-full flex flex-col items-center border-t rounded-t-3xl relative z-0 overflow-hidden mt-8">
-        <img className="absolute top-0 right-0 -z-50" src={GRADIENT_1_PNG} />
-        <img className="absolute left-0 -z-50" src={GRADIENT_2_PNG} />
-        <img className="absolute right-0 bottom-0 -z-50" src={GRADIENT_5_PNG} />
         <HeroSection />
         <div className="w-full flex flex-col items-center relative z-0">
           <div className="w-11/12 flex flex-col items-center mt-32">
