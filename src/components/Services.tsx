@@ -1,11 +1,19 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { motion } from "framer-motion";
 import Service from "./Service";
 import { services } from "@/utils/data";
 import { scrollToCallToAction } from "@/utils/scrollTo";
 
 export default function Services() {
   return (
-    <div id="services" className="w-full flex flex-col relative">
+    <motion.div
+      id="services"
+      className="w-full flex flex-col relative"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       <div className="text-4xl text-black font-semibold">
         HOW CAN I HELP YOU
       </div>
@@ -29,10 +37,10 @@ export default function Services() {
         </div>
       </div>
       <div className="w-full flex flex-col my-16">
-        {services.map((service, index) => {
-          return <Service key={index} index={index + 1} service={service} />;
-        })}
+        {services.map((service, index) => (
+          <Service key={index} index={index + 1} service={service} />
+        ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
