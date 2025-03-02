@@ -239,6 +239,16 @@ export const teamMembers: TeamMember[] = [
     github_url: "https://github.com/abdelfetah18",
     linkedin_url: "https://www.linkedin.com/in/abdelfetahdev",
   },
+  {
+    name: "Benhadjer Mohamed",
+    skills: [
+      "Mobile Development",
+      "Desktop Development"
+    ],
+    testimonial: "Mohamed is a talented developer with exceptional skills in mobile and desktop development. His dedication to creating efficient and user-friendly applications makes him a valuable asset to any project.",
+    github_url: "https://github.com/mohamedbenhadjer",
+    linkedin_url: "https://www.linkedin.com/in/mohamed-benhadjer-40543b2a8/"
+  }
 ];
 
 export const testimonials: testimonials[] = [
