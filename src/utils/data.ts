@@ -248,7 +248,7 @@ export const teamMembers: TeamMember[] = [
     testimonial: "A dedicated problem solver with a passion for mobile innovation!",
     github_url: "https://github.com/mohamedbenhadjer",
     linkedin_url: "https://www.linkedin.com/in/mohamed-benhadjer-40543b2a8/",
-    profile_image_url: "\team_members\mohamed.jpg",
+    profile_image_url: "/team_members/mohamed.jpg",
   }
 ];
 
