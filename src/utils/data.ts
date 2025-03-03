@@ -245,9 +245,10 @@ export const teamMembers: TeamMember[] = [
       "Mobile Development",
       "Desktop Development"
     ],
-    testimonial: "Mohamed is a talented developer with exceptional skills in mobile and desktop development. His dedication to creating efficient and user-friendly applications makes him a valuable asset to any project.",
+    testimonial: "A dedicated problem solver with a passion for mobile innovation!",
     github_url: "https://github.com/mohamedbenhadjer",
-    linkedin_url: "https://www.linkedin.com/in/mohamed-benhadjer-40543b2a8/"
+    linkedin_url: "https://www.linkedin.com/in/mohamed-benhadjer-40543b2a8/",
+    profile_image_url: "\team_members\mohamed.jpg",
   }
 ];
 
