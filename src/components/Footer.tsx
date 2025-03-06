@@ -42,7 +42,7 @@ export default function Footer() {
               </div>
             </a>
             <a
-              href={"https://www.facebook.com/profile.php?"}
+              href={"https://www.facebook.com/profile.php?id=61573659932418"}
               target="_blank"
               title="Facebook"
             >
