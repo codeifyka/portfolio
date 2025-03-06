@@ -10,6 +10,7 @@ import {
 import { scrollToCallToAction } from "@/utils/scrollTo";
 import { Icon } from "@iconify/react";
 import { GRADIENT_1_PNG, GRADIENT_2_PNG, GRADIENT_5_PNG } from "@/utils/consts";
+import { projects } from "@/utils/data";
 
 export default function HeroSection() {
   const containerRef = useRef(null);
@@ -120,6 +121,27 @@ export default function HeroSection() {
         "-=1"
       );
 
+    counterRefs.current.forEach((counter, index) => {
+      if (counter) {
+        const targetValue = index === 0 ? projects.length : 5;
+        gsap.fromTo(
+          counter.querySelector(".counter-value"),
+          {
+            innerText: 0,
+          },
+          {
+            innerText: targetValue,
+            duration: 3,
+            ease: "power2.out",
+            snap: { innerText: 1 }, 
+            delay: 5,
+            stagger: 0.2,
+          }
+        );
+      }
+    });
+
+    // Arrow Animation
     gsap.to(arrowRef.current, {
       y: -10,
       duration: 1.5,
@@ -188,7 +210,7 @@ export default function HeroSection() {
             }}
           >
             <div className="text-base">Projects</div>
-            <div className="font-semibold text-xl">22</div>
+            <div className="font-semibold text-xl counter-value">0</div>
           </div>
           <div
             ref={(el) => {
@@ -204,7 +226,7 @@ export default function HeroSection() {
             }}
           >
             <div className="text-base">Client</div>
-            <div className="font-semibold text-xl">12</div>
+            <div className="font-semibold text-xl counter-value">0</div>
           </div>
         </div>
         <div ref={ctaRef} className="w-full sm:w-1/3 flex items-start gap-2">
