@@ -23,7 +23,7 @@ export default function Modal({ setIsOpen }: ModalProps) {
         <div className="text-black/75">
           Contact us and we will bring your flexible work vision to life.
         </div>
-        <div className="flex gap-8">
+        <div className="flex flex-col md:flex-row gap-8">
           <div>
             <div className="font-semibold text-black flex items-center gap-1">
               Fullname <div className="text-red-600">*</div>
