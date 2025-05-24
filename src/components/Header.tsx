@@ -75,7 +75,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="w-full hero -translate-y-full transition-colors duration-300"
+      className="w-full hero -translate-y-full transition-colors duration-300 z-50"
       aria-label="hero"
     >
       <div className="w-full flex items-center justify-between py-4 px-6">
@@ -94,8 +94,8 @@ export default function Header() {
                         w-full h-screen sm:h-fit sm:w-fit 
                         ${isOpen ? "flex" : "opacity-0 sm:opacity-100 sm:flex"} 
                         flex-col sm:flex-row items-center gap-8 
-                        sm:bg-transparent bg-white/95 backdrop-blur-sm
-                        sm:py-0 py-8 duration-300
+                        sm:bg-transparent bg-white backdrop-blur-sm
+                        sm:py-0 py-8 duration-300                 
                     `}
         >
           <div
