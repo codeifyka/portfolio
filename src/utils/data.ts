@@ -181,30 +181,30 @@ export const projects: Project[] = [
 ];
 
 export const blogs: Blog[] = [
-  {
-    title: "Design Systems",
-    description: "Unlock Consistency and Efficiency for Your SaaS UI/UX...",
-    author: "salah",
-    created_at: "07/04/2024",
-  },
-  {
-    title: "Design Systems",
-    description: "Unlock Consistency and Efficiency for Your SaaS UI/UX...",
-    author: "salah",
-    created_at: "07/04/2024",
-  },
-  {
-    title: "Design Systems",
-    description: "Unlock Consistency and Efficiency for Your SaaS UI/UX...",
-    author: "salah",
-    created_at: "07/04/2024",
-  },
-  {
-    title: "Design Systems",
-    description: "Unlock Consistency and Efficiency for Your SaaS UI/UX...",
-    author: "salah",
-    created_at: "07/04/2024",
-  },
+  // {
+  //   title: "Design Systems",
+  //   description: "Unlock Consistency and Efficiency for Your SaaS UI/UX...",
+  //   author: "salah",
+  //   created_at: "07/04/2024",
+  // },
+  // {
+  //   title: "Design Systems",
+  //   description: "Unlock Consistency and Efficiency for Your SaaS UI/UX...",
+  //   author: "salah",
+  //   created_at: "07/04/2024",
+  // },
+  // {
+  //   title: "Design Systems",
+  //   description: "Unlock Consistency and Efficiency for Your SaaS UI/UX...",
+  //   author: "salah",
+  //   created_at: "07/04/2024",
+  // },
+  // {
+  //   title: "Design Systems",
+  //   description: "Unlock Consistency and Efficiency for Your SaaS UI/UX...",
+  //   author: "salah",
+  //   created_at: "07/04/2024",
+  // },
 ];
 
 export const teamMembers: TeamMember[] = [
@@ -239,17 +239,17 @@ export const teamMembers: TeamMember[] = [
     github_url: "https://github.com/abdelfetah18",
     linkedin_url: "https://www.linkedin.com/in/abdelfetahdev",
   },
-  {
-    name: "Benhadjer Mohamed",
-    skills: [
-      "Mobile Development",
-      "Desktop Development"
-    ],
-    testimonial: "A dedicated problem solver with a passion for mobile innovation!",
-    github_url: "https://github.com/mohamedbenhadjer",
-    linkedin_url: "https://www.linkedin.com/in/mohamed-benhadjer-40543b2a8/",
-    profile_image_url: "/team_members/mohamed.jpg",
-  }
+  // {
+  //   name: "Benhadjer Mohamed",
+  //   skills: [
+  //     "Mobile Development",
+  //     "Desktop Development"
+  //   ],
+  //   testimonial: "A dedicated problem solver with a passion for mobile innovation!",
+  //   github_url: "https://github.com/mohamedbenhadjer",
+  //   linkedin_url: "https://www.linkedin.com/in/mohamed-benhadjer-40543b2a8/",
+  //   profile_image_url: "/team_members/mohamed.jpg",
+  // }
 ];
 
 export const testimonials: testimonials[] = [
