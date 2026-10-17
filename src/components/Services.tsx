@@ -20,7 +20,7 @@ export default function Services() {
       <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-20 mt-4">
         <div className="text-accent font-medium text-xl">{"[Services]"}</div>
         <div>
-          <div className="text-black text-base w-80">
+          <div className="text-black text-base w-80 text-justify">
             {
               "Our dedicated team delivers top-notch results, tailored to meet your unique needs. Explore our services and let us bring your vision to life."
             }

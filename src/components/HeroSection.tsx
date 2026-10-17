@@ -123,7 +123,7 @@ export default function HeroSection() {
 
     counterRefs.current.forEach((counter, index) => {
       if (counter) {
-        const targetValue = index === 0 ? projects.length : 5;
+        const targetValue = index === 0 ? projects.length : 3;
         gsap.fromTo(
           counter.querySelector(".counter-value"),
           {
@@ -184,7 +184,7 @@ export default function HeroSection() {
         </div>
         <div
           ref={heroTextRef}
-          className="w-full sm:w-1/2 mt-4 text-black/75 text-base"
+          className="w-full sm:w-1/2 mt-4 text-black/75 text-base text-justify"
         >
           {HERO_TEXT}
         </div>
@@ -232,7 +232,7 @@ export default function HeroSection() {
         <div ref={ctaRef} className="w-full sm:w-1/3 flex items-start gap-2">
           <img src={ARROW_DOWN_PNG} className="h-6" />
           <div>
-            <div className="text-black/75 font-medium">{HERO_TEXT_2}</div>
+            <div className="text-black/75 font-medium text-justify">{HERO_TEXT_2}</div>
             <div
               onClick={scrollToCallToAction}
               className="group w-fit px-4 py-2 mt-4 rounded-lg cursor-pointer active:scale-105 transition-all duration-200 hover:opacity-95 bg-black/75 text-white flex items-center gap-4"

@@ -1,7 +1,7 @@
 "use client";
-import About from "@/components/About";
 import Blogs from "@/components/Blogs";
 import CallToAction from "@/components/CallToAction";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
@@ -44,12 +44,10 @@ export default function Home() {
             src={GRADIENT_4_PNG}
           />
         </div>
-        <div className="w-11/12 flex flex-col items-center mt-32">
-          <About />
-        </div>
         <div className="w-11/12 flex flex-col items-center gap-32 mt-32">
           <Blogs />
           <Testimonials />
+          <FAQ />
           <CallToAction setIsOpen={setIsOpen}/>
         </div>
         <div className="w-full flex flex-col items-center mt-32">

@@ -50,7 +50,7 @@ export default function Blogs() {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <div className="text-black text-base w-80">
+          <div className="text-black text-base w-80 text-justify">
             {
               " Welcome to our blogs, where we dive deep into the world of technology, innovation, and industry insights"
             }

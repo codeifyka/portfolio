@@ -13,6 +13,7 @@ export default function Footer() {
           <div className="flex flex-col gap-1">
             <a href="mailto:codeifyka@gmail.com" className="text-black">codeifyka@gmail.com</a>
             <a href="tel:0798816073" className="text-black">+213798816073</a>
+            <a href="tel:0784630529" className="text-black">+213784630529</a>
           </div>
         </div>
         <div className="flex flex-col text-center gap-4">
@@ -59,7 +60,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="w-11/12 border-t border-black py-3 text-black text-center text-xs font-semibold mt-16">
-        {"© 2025 Codeifyka. All rights reserved."}
+        {"© " + new Date().getFullYear() + " Codeifyka. All rights reserved."}
       </div>
     </div>
   );

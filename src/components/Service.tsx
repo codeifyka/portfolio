@@ -27,7 +27,7 @@ export default function Service({ index, service }: ServiceProps) {
       <div className="w-full flex flex-col sm:flex-row">
         <div className="w-full sm:w-1/3"></div>
         <div className="w-full sm:w-2/3 flex flex-col">
-          <div className="text-base text-black">{service.description}</div>
+          <div className="text-base text-black text-justify">{service.description}</div>
         </div>
       </div>
     </motion.div>

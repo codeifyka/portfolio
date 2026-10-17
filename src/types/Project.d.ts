@@ -2,7 +2,7 @@ interface Project {
     title: string;
     description: string;
     categories: string[];
-    skills: string[];
+    features: string[];
     thumbnail_url: string;
     created_at: string;
     preview_url?: string;

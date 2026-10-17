@@ -52,26 +52,26 @@ export default function Project({ index, project }: ProjectProps) {
       </div>
       <div className="w-full flex flex-col sm:flex-row gap-8">
         <div className="w-full">
-          <div className="text-base text-white">{project.description}</div>
+          <div className="text-base text-white text-justify">{project.description}</div>
           <div className="mt-4 flex items-center flex-wrap gap-2">
             {project.categories.map((category, index) => (
               <div key={index} className="text-xs">
                 {category}
               </div>
             ))}
-            {project.source_code_url && (
-              <Link href={project.source_code_url} target="_blank">
-                <div className="text-xs underline">Source Code</div>
-              </Link>
-            )}
             {project.preview_url && (
               <Link href={project.preview_url} target="_blank">
                 <div className="text-xs underline">Preview</div>
               </Link>
             )}
+            {project.source_code_url && (
+              <Link href={project.source_code_url} target="_blank">
+                <div className="text-xs underline">Source Code</div>
+              </Link>
+            )}
           </div>
           <div className="mt-8 flex items-center flex-wrap gap-2">
-            {project.skills.map((skill, index) => (
+            {project.features.map((skill, index) => (
               <div
                 key={index}
                 className="text-xs border border-white rounded-full p-2"

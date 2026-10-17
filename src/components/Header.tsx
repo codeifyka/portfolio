@@ -105,12 +105,6 @@ export default function Header() {
             Services
           </div>
           <div
-            onClick={() => scrollToWrapper({ section: "about" })}
-            className=" text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
-          >
-            About Us
-          </div>
-          <div
             onClick={() => scrollToWrapper({ section: "projects" })}
             className=" text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
           >
@@ -129,7 +123,13 @@ export default function Header() {
             Testimonials
           </div>
           <div
-            onClick={() => scrollToWrapper({ section: "contact" })}
+            onClick={() => scrollToWrapper({ section: "faq" })}
+            className=" text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
+          >
+            FAQ
+          </div>
+          <div
+            onClick={() => scrollToWrapper({ section: "callToAction" })}
             className=" text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
           >
             Contact Us

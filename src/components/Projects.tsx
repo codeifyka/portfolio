@@ -67,7 +67,7 @@ export default function Projects() {
         </motion.div>
         
         <motion.div variants={itemVariants}>
-          <div className="text-white text-base w-80">
+          <div className="text-white text-base w-80 text-justify">
             {"Selected Works Discover a curated collection of our finest projects, showcasing our diverse expertise and creativity."}
           </div>
           

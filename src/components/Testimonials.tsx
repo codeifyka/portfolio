@@ -34,7 +34,7 @@ export default function Testimonials() {
             {"[Testimonials]"}
           </div>
           <div>
-            <div className="text-black text-base sm:w-96">
+            <div className="text-black text-base sm:w-96 text-justify">
               {
                 "Here's what my clients say about our collaboration. Their satisfaction and meeting expectations are my top priorities, ensuring the best experience possible."
               }
