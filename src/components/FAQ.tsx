@@ -3,7 +3,7 @@
 import { faqs } from "@/utils/data";
 import { scrollToCallToAction } from "@/utils/scrollTo";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { useState } from "react";
 
 export default function FAQ() {
@@ -13,7 +13,7 @@ export default function FAQ() {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -24,7 +24,7 @@ export default function FAQ() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
