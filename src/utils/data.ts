@@ -124,6 +124,31 @@ export const projects: Project[] = [
       "/projects/fitVibe/image6.jpg",
     ],
   },
+  {
+    title: "Docapp",
+    thumbnail_url: "/projects/docapp/thumbnail.png",
+    description:
+      "A full-stack healthcare platform connecting patients with specialized doctors, featuring automated appointment scheduling, doctor credentialing, and administrative oversight.",
+    categories: ["Web App","Web Development", "DevOps"],
+    features: [
+      'Appointment booking',
+      'Live slot scheduling',
+      'Doctor approval workflow',
+      'Patient reviews & ratings',
+      'Admin clinic dashboard',
+    ],
+    created_at: "2024",
+    preview_url: "https://docapp27.netlify.app/",
+    source_code_url: "https://github.com/kadik23/doctor-appointment",
+    other_images: [
+      "projects/docapp/docap_1.png",
+      "projects/docapp/docap_2.png",
+      "projects/docapp/docap_5.png",
+      "projects/docapp/docap_6.png",
+      "projects/docapp/docap_7.png",
+      "projects/docapp/docap_8.png",
+    ],
+  },
   // {
   //   title: "Novalance",
   //   thumbnail_url: "/projects/novalance/thumbnail.png",
