@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Modal from "@/components/Modal";
+import Preloader from "@/components/Preloader";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
@@ -13,19 +14,39 @@ import {
   GRADIENT_3_PNG,
   GRADIENT_4_PNG,
 } from "@/utils/consts";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isLoading]);
 
   return (
-    <div className="w-full flex flex-col items-center bg-white">
-      <div className="w-11/12 flex flex-col items-center">
-        <Header />
-      </div>
-      {isOpen && <Modal setIsOpen={setIsOpen}/>}
-      <div className="w-full flex flex-col items-center border-t rounded-t-3xl relative z-0 overflow-hidden mt-8">
-        <HeroSection />
+    <>
+      {isLoading && (
+        <Preloader
+          onStartExit={() => setIsReady(true)}
+          onComplete={() => setIsLoading(false)}
+        />
+      )}
+      <div className="w-full flex flex-col items-center bg-white">
+        <div className="w-11/12 flex flex-col items-center">
+          <Header isStarted={isReady} />
+        </div>
+        {isOpen && <Modal setIsOpen={setIsOpen}/>}
+        <div className="w-full flex flex-col items-center border-t rounded-t-3xl relative z-0 overflow-hidden mt-8">
+          <HeroSection isStarted={isReady} />
         <div className="w-full flex flex-col items-center relative z-0">
           <div className="w-11/12 flex flex-col items-center mt-32">
             <Services />
@@ -61,5 +82,6 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  </>
+);
 }

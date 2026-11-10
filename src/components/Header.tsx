@@ -5,7 +5,11 @@ import Lenis from "@studio-freight/lenis";
 import useScrollTo from "@/hooks/useScrollTo";
 import { LOGO_PNG } from "@/utils/consts";
 
-export default function Header() {
+interface HeaderProps {
+  isStarted?: boolean;
+}
+
+export default function Header({ isStarted = true }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollTo } = useScrollTo();
   const headerRef = useRef(null);
@@ -26,34 +30,44 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
+    if (!isStarted) return;
+
     // Initial header animation
     gsap.to(headerRef.current, {
       y: 0,
-      duration: 1.5,
-      delay: 0.3,
-      ease: "power4.out",
+      duration: 0.7,
+      ease: "power3.out",
     });
 
     // Logo animation
-    gsap.from(logoRef.current, {
-      scale: 0,
-      duration: 1,
-      delay: 0.5,
-      ease: "back.out(1.7)",
-    });
+    gsap.fromTo(
+      logoRef.current,
+      { scale: 0, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 0.6,
+        delay: 0.05,
+        ease: "back.out(1.7)",
+      }
+    );
 
     // Nav items stagger animation
-    gsap.from(".nav-item", {
-      y: -20,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.1,
-      delay: 0.7,
-      ease: "power2.out",
-    });
+    gsap.fromTo(
+      ".nav-item",
+      { y: -20, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.4,
+        stagger: 0.05,
+        delay: 0.1,
+        ease: "power2.out",
+      }
+    );
 
     // Scroll-based color change
-    ScrollTrigger.create({
+    const trigger = ScrollTrigger.create({
       start: "top -100",
       end: 99999,
       toggleClass: {
@@ -61,7 +75,11 @@ export default function Header() {
         targets: headerRef.current,
       },
     });
-  }, []);
+
+    return () => {
+      trigger.kill();
+    };
+  }, [isStarted]);
 
   interface ScrollToWrapperProps {
     section: string;
@@ -100,37 +118,37 @@ export default function Header() {
         >
           <div
             onClick={() => scrollToWrapper({ section: "services" })}
-            className=" text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
+            className="nav-item text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
           >
             Services
           </div>
           <div
             onClick={() => scrollToWrapper({ section: "projects" })}
-            className=" text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
+            className="nav-item text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
           >
             Projects
           </div>
           <div
             onClick={() => scrollToWrapper({ section: "blogs" })}
-            className=" text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
+            className="nav-item text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
           >
             Blogs
           </div>
           <div
             onClick={() => scrollToWrapper({ section: "testimonials" })}
-            className=" text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
+            className="nav-item text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
           >
             Testimonials
           </div>
           <div
             onClick={() => scrollToWrapper({ section: "faq" })}
-            className=" text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
+            className="nav-item text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
           >
             FAQ
           </div>
           <div
             onClick={() => scrollToWrapper({ section: "callToAction" })}
-            className=" text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
+            className="nav-item text-base font-semibold text-black/60 cursor-pointer hover:text-black/90 active:scale-105 duration-300"
           >
             Contact Us
           </div>

@@ -12,7 +12,11 @@ import { Icon } from "@iconify/react";
 import { GRADIENT_1_PNG, GRADIENT_2_PNG, GRADIENT_5_PNG } from "@/utils/consts";
 import { projects } from "@/utils/data";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  isStarted?: boolean;
+}
+
+export default function HeroSection({ isStarted = true }: HeroSectionProps) {
   const containerRef = useRef(null);
   const logoRef = useRef(null);
   const heroTextRef = useRef(null);
@@ -25,100 +29,68 @@ export default function HeroSection() {
   const gradient5Ref = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    if (!isStarted) return;
 
-    tl.from(containerRef.current, {
-      opacity: 0,
-      duration: 1,
-      height: 0,
-      width: 0,
-      y: 100,
-      ease: "power3.inOut",
-    });
+    const tl = gsap.timeline();
 
     tl.fromTo(
       gradient1Ref.current,
       { x: "100%", opacity: 0 },
-      { x: "0%", opacity: 1, duration: 1.5, ease: "power3.out" }
+      { x: "0%", opacity: 1, duration: 0.9, ease: "power3.out" }
     )
       .fromTo(
         gradient2Ref.current,
         { x: "-100%", opacity: 0 },
-        { x: "0%", opacity: 1, duration: 1.5, ease: "power3.out" },
-        "-=1.25"
+        { x: "0%", opacity: 1, duration: 0.9, ease: "power3.out" },
+        "-=0.7"
       )
       .fromTo(
         gradient5Ref.current,
         { y: "100%", opacity: 0 },
-        { y: "0%", opacity: 1, duration: 1.5, ease: "power3.out" },
-        "-=1.25"
+        { y: "0%", opacity: 1, duration: 0.9, ease: "power3.out" },
+        "-=0.7"
       )
-
-      .from(
+      .fromTo(
         logoRef.current,
+        { scale: 1.2, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.7, ease: "power4.out" },
+        "-=0.5"
+      )
+      .fromTo(
+        heroTextRef.current,
+        { y: 35, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.7, ease: "power4.out" },
+        "-=0.5"
+      )
+      .fromTo(
+        statsRef.current,
+        { x: -35, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.7, ease: "power4.out" },
+        "-=0.5"
+      )
+      .fromTo(
+        counterRefs.current,
+        { scale: 0, opacity: 0 },
         {
-          scale: 1.3,
-          opacity: 0,
-          duration: 1.5,
-          ease: "power4.inOut",
+          scale: 1,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "back.out(1.7)",
         },
         "-=0.5"
       )
-
-      .from(
-        heroTextRef.current,
-        {
-          y: 100,
-          opacity: 0,
-          duration: 1.5,
-          ease: "power4.inOut",
-        },
-        "-=1"
-      )
-
-      .from(
-        statsRef.current,
-        {
-          x: -100,
-          opacity: 0,
-          duration: 1.5,
-          ease: "power4.inOut",
-        },
-        "-=1"
-      )
-
-      .from(
-        counterRefs.current,
-        {
-          scale: 0,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.2,
-          ease: "back.out(1.7)",
-        },
-        "-=1"
-      )
-
-      .from(
+      .fromTo(
         ctaRef.current,
-        {
-          x: 100,
-          opacity: 0,
-          duration: 1.5,
-          ease: "power4.inOut",
-        },
-        "-=1.5"
+        { x: 35, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.7, ease: "power4.out" },
+        "-=0.6"
       )
-
-      .from(
+      .fromTo(
         arrowRef.current,
-        {
-          rotate: 0,
-          opacity: 0,
-          duration: 1,
-          ease: "power2.inOut",
-        },
-        "-=1"
+        { rotate: 0, opacity: 0 },
+        { rotate: 135, opacity: 1, duration: 0.6, ease: "power2.out" },
+        "-=0.5"
       );
 
     counterRefs.current.forEach((counter, index) => {
@@ -131,25 +103,30 @@ export default function HeroSection() {
           },
           {
             innerText: targetValue,
-            duration: 3,
+            duration: 1.4,
             ease: "power2.out",
-            snap: { innerText: 1 }, 
-            delay: 5,
-            stagger: 0.2,
+            snap: { innerText: 1 },
+            delay: 0.2,
+            stagger: 0.15,
           }
         );
       }
     });
 
-    // Arrow Animation
-    gsap.to(arrowRef.current, {
+    // Arrow continuous floating Animation
+    const arrowTween = gsap.to(arrowRef.current, {
       y: -10,
       duration: 1.5,
       repeat: -1,
       yoyo: true,
       ease: "power1.inOut",
     });
-  }, []);
+
+    return () => {
+      tl.kill();
+      arrowTween.kill();
+    };
+  }, [isStarted]);
 
   return (
     <div
