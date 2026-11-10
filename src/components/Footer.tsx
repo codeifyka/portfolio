@@ -1,4 +1,4 @@
-import { LINKEDIN_PNG, LOGO_PNG } from "@/utils/consts";
+import { LOGO_PNG } from "@/utils/consts";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Footer() {
@@ -60,9 +60,13 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="LinkedIn"
-                className="hover:scale-110 active:scale-95 transition-transform duration-200"
+                className="bg-black hover:bg-neutral-800 text-white p-2 rounded-full hover:scale-110 active:scale-95 transition-all duration-200"
               >
-                <img className="h-9 w-9 object-contain" src={LINKEDIN_PNG} alt="LinkedIn" />
+                <Icon
+                  icon="line-md:linkedin"
+                  width="20"
+                  height="20"
+                />
               </a>
               <a
                 href="https://www.instagram.com/codeifyka"

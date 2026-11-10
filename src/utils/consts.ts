@@ -9,9 +9,6 @@ export const COUNTER_BG_PNG = "/counter_bg.svg";
 export const ARROW_DOWN_PNG = "/arrow_down.svg";
 export const STAR_PNG = "/star.svg";
 export const SECONDARY_STAR_PNG = "/secondary_star.svg";
-export const LINKEDIN_PNG = "/linkedin.png";
-export const GITHUB = "/google.png";
-export const BEHANCE_PNG = "/blog.png";
 export const WORK_GLOBALY_PNG = "/work_globaly.svg";
 export const DEFAULT_MEMBER_PNG = "/team_members/default.png";
 
