@@ -33,6 +33,9 @@ export default function Home() {
           <img
             className="absolute bottom-0 right-0 translate-y-1/2 -z-50"
             src={GRADIENT_3_PNG}
+            alt=""
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
         <div className="w-full flex flex-col items-center mt-32 bg-black rounded-t-3xl relative z-0">
@@ -42,6 +45,9 @@ export default function Home() {
           <img
             className="absolute left-0 bottom-0 -z-50"
             src={GRADIENT_4_PNG}
+            alt=""
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
         <div className="w-11/12 flex flex-col items-center gap-32 mt-32">

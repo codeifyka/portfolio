@@ -161,18 +161,24 @@ export default function HeroSection() {
         className="absolute top-0 right-0 -z-50"
         src={GRADIENT_1_PNG}
         alt="Gradient 1"
+        fetchPriority="high"
+        decoding="async"
       />
       <img
         ref={gradient2Ref}
         className="absolute left-0 -z-50"
         src={GRADIENT_2_PNG}
         alt="Gradient 2"
+        fetchPriority="high"
+        decoding="async"
       />
       <img
         ref={gradient5Ref}
         className="absolute right-0 bottom-0 -z-50"
         src={GRADIENT_5_PNG}
         alt="Gradient 5"
+        fetchPriority="high"
+        decoding="async"
       />
       <div className="w-11/12 flex flex-col py-4">
         <div ref={logoRef} className="h-10 w-fit">

@@ -1,8 +1,9 @@
 import { SECONDARY_STAR_PNG } from "@/utils/consts";
 import Link from "next/link";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import Image from "next/image";
 
 interface ProjectProps {
   index: number;
@@ -12,6 +13,10 @@ interface ProjectProps {
 export default function Project({ index, project }: ProjectProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isThumbnailLoaded, setIsThumbnailLoaded] = useState(false);
+
+  const imgContainerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(imgContainerRef, { once: true, margin: "200px" });
 
   const images = project.other_images || [];
 
@@ -46,7 +51,7 @@ export default function Project({ index, project }: ProjectProps) {
             </div>
           </Link>
           <div className="h-12">
-            <img src={SECONDARY_STAR_PNG} />
+            <img src={SECONDARY_STAR_PNG} alt="Star icon" />
           </div>
         </div>
       </div>
@@ -89,13 +94,27 @@ export default function Project({ index, project }: ProjectProps) {
         </div>
         <div className="w-full flex flex-col">
           <div
-            className="w-full aspect-video bg-gray-500 rounded-xl cursor-pointer"
+            ref={imgContainerRef}
+            className="w-full aspect-video bg-gray-500 rounded-xl cursor-pointer relative overflow-hidden flex items-center justify-center"
             onClick={openModal}
           >
-            <img
-              src={project.thumbnail_url}
-              className="w-full aspect-video bg-gray-500 rounded-xl object-contain"
-            />
+            {!isThumbnailLoaded && (
+              <div className="absolute inset-0 bg-neutral-800 animate-pulse rounded-xl" />
+            )}
+            {isInView && (
+              <Image
+                src={project.thumbnail_url}
+                alt={project.title}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                className={`w-full aspect-video rounded-xl object-contain transition-opacity duration-500 ${
+                  isThumbnailLoaded ? "opacity-100" : "opacity-0"
+                }`}
+                loading="lazy"
+                decoding="async"
+                onLoad={() => setIsThumbnailLoaded(true)}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -119,8 +138,14 @@ export default function Project({ index, project }: ProjectProps) {
               <AnimatePresence mode="wait">
                 <motion.img
                   key={images[currentImageIndex]}
-                  src={images[currentImageIndex]}
+                  src={
+                    images[currentImageIndex]?.startsWith("/")
+                      ? images[currentImageIndex]
+                      : `/${images[currentImageIndex]}`
+                  }
                   alt={`Image ${currentImageIndex + 1}`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full max-h-[80vh] rounded-lg object-contain"
                   initial={{ x: 300, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
